@@ -1,0 +1,18 @@
+.header {
+    min-height: 16rem;
+    display: flex;
+    justify-content: end;
+    .imgAndName {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        .profileImg {
+            width: 8rem;
+            border-radius: 100%;
+        }
+    }
+}
+
+.userInfos {
+    margin: 2rem 0 0 0;
+}

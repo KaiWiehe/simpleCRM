@@ -1,0 +1,24 @@
+<mat-card class="header">
+    <mat-card-content>
+        <div class="imgAndName">
+            <img class="profileImg" src="./assets/img/profile.png" alt="profile">
+            <div>
+                <h1>{{ userData.firstName }} {{ userData.lastName }}</h1>
+                <p>{{ userData.mail }}</p>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+<mat-card class="userInfos">
+    <mat-card-content>
+        <h1>Address</h1>
+        <p>{{ userData.street }}</p>
+        <p>{{ userData.zipCode }} {{ userData.city }}</p>
+    </mat-card-content>
+</mat-card>
+<mat-card class="userInfos">
+    <mat-card-content>
+        <h1>Birth date</h1>
+        <p>{{ userData.birthDate }}</p>
+    </mat-card-content>
+</mat-card>
