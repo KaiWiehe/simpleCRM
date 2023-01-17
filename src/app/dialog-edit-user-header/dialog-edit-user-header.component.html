@@ -1,0 +1,29 @@
+<mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+
+<h1 mat-dialog-title>Add user</h1>
+
+<div class="inputs">
+    <mat-form-field appearance="outline">
+        <mat-label>First name</mat-label>
+        <input [disabled]="loading" [(ngModel)]="user.firstName" matInput placeholder="Max ">
+        <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Last name</mat-label>
+        <input [disabled]="loading" [(ngModel)]="user.lastName" matInput placeholder="Mustermann">
+        <mat-icon matSuffix>person</mat-icon>
+    </mat-form-field>
+</div>
+
+<div class="inputs">
+    <mat-form-field appearance="outline" class="width100">
+        <mat-label>Mail</mat-label>
+        <input [disabled]="loading" [(ngModel)]="user.mail" matInput placeholder="Pattern@mail.de">
+        <mat-icon matSuffix>mail</mat-icon>
+    </mat-form-field>
+</div>
+
+<div mat-dialog-actions class="buttons">
+    <button [disabled]="loading" mat-button (click)="onNoClick()">Cancel</button>
+    <button [disabled]="loading" mat-button (click)="save()" cdkFocusInitial>Save</button>
+</div>

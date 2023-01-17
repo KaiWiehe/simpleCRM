@@ -1,5 +1,11 @@
 <mat-card class="header">
     <mat-card-content>
+        <button mat-icon-button class="menuIcon" [matMenuTriggerFor]="user">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #user="matMenu">
+            <button mat-menu-item (click)="openEditUserHeaderDialog()">Edit</button>
+        </mat-menu>
         <div class="imgAndName">
             <img class="profileImg" src="./assets/img/profile.png" alt="profile">
             <div>
@@ -11,6 +17,12 @@
 </mat-card>
 <mat-card class="userInfos">
     <mat-card-content>
+        <button mat-icon-button class="menuIcon" [matMenuTriggerFor]="address">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #address="matMenu">
+            <button mat-menu-item (click)="openEditAddressDialog()">Edit</button>
+        </mat-menu>
         <h1>Address</h1>
         <p>{{ userData.street }}</p>
         <p>{{ userData.zipCode }} {{ userData.city }}</p>
@@ -18,6 +30,12 @@
 </mat-card>
 <mat-card class="userInfos">
     <mat-card-content>
+        <button mat-icon-button class="menuIcon" [matMenuTriggerFor]="birthDate">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #birthDate="matMenu">
+            <button mat-menu-item (click)="openEditBirthDateDialog()">Edit</button>
+        </mat-menu>
         <h1>Birth date</h1>
         <p>{{ userData.birthDate }}</p>
     </mat-card-content>
