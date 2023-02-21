@@ -50,7 +50,15 @@
     </mat-form-field>
 </div>
 
+<button type="button" mat-raised-button (click)="fileInput.click()" class="inputs">
+    Choose a profile image
+    <mat-icon>add_a_photo</mat-icon>
+</button>
+<input hidden (change)="onFileSelected()" #fileInput type="file" accept="image/png, image/jpg" (change)="saveImg()">
+
+<div *ngIf="imgBase64" class="showImg" style="background-image: url({{imgBase64}});"></div>
+
 <div mat-dialog-actions class="buttons">
-    <button [disabled]="loading" mat-button (click)="onNoClick()">Cancel</button>
-    <button [disabled]="loading" mat-button (click)="saveUser()" cdkFocusInitial>Save</button>
+    <button [disabled]="loading" mat-raised-button (click)="onNoClick()">Cancel</button>
+    <button [disabled]="loading" mat-raised-button (click)="saveUser()" color="primary">Save</button>
 </div>

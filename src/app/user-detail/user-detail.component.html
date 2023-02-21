@@ -7,7 +7,8 @@
             <button mat-menu-item (click)="openEditUserHeaderDialog()">Edit</button>
         </mat-menu>
         <div class="imgAndName">
-            <img class="profileImg" src="./assets/img/profile.png" alt="profile">
+            <img *ngIf="!userData.img" class="profileImg" src="./assets/img/profile.png" alt="profile">
+            <div *ngIf="userData.img" class="profileImg imgFound" style="background-image: url({{userData.img}});"></div>
             <div>
                 <h1>{{ userData.firstName }} {{ userData.lastName }}</h1>
                 <p>{{ userData.mail }}</p>
@@ -37,6 +38,6 @@
             <button mat-menu-item (click)="openEditBirthDateDialog()">Edit</button>
         </mat-menu>
         <h1>Birth date</h1>
-        <p>{{ userData.birthDate }}</p>
+        <p>{{ bDay }}.{{ bMonth }}.{{ bYear }}</p>
     </mat-card-content>
 </mat-card>

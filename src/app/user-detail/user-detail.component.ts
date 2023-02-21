@@ -18,6 +18,10 @@ export class UserDetailComponent {
   coll;
   public userData: User = new User();
 
+  bDay;
+  bMonth;
+  bYear;
+
   constructor(
     private route: ActivatedRoute,
     private firestore: Firestore,
@@ -33,6 +37,7 @@ export class UserDetailComponent {
 
       userDocData.subscribe((user: any) => {
         this.userData = new User(user);
+        this.setBirthDate();
         // this.userData.firstName = user.firstName;
         // this.userData.lastName = user.lastName;
         // this.userData.mail = user.mail;
@@ -40,8 +45,17 @@ export class UserDetailComponent {
         // this.userData.street = user.street;
         // this.userData.zipCode = user.zipCode;
         // this.userData.city = user.city;
+        //console.log('bday',new Date(this.userData.birthDate));
       });
+
     })
+  }
+
+  setBirthDate(){
+    let birthDate = new Date(this.userData.birthDate);
+    this.bDay = birthDate.getDate();
+    this.bMonth = birthDate.getMonth() + 1;
+    this.bYear = birthDate.getFullYear();
   }
 
   openEditUserHeaderDialog(){
