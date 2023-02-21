@@ -1,8 +1,8 @@
 <mat-card class="header">
     <mat-card-content>
         <button mat-icon-button class="menuIcon" [matMenuTriggerFor]="user">
-          <mat-icon>more_vert</mat-icon>
-        </button>
+        <mat-icon>more_vert</mat-icon>
+      </button>
         <mat-menu #user="matMenu">
             <button mat-menu-item (click)="openEditUserHeaderDialog()">Edit</button>
         </mat-menu>
@@ -19,8 +19,8 @@
 <mat-card class="userInfos">
     <mat-card-content>
         <button mat-icon-button class="menuIcon" [matMenuTriggerFor]="address">
-          <mat-icon>more_vert</mat-icon>
-        </button>
+        <mat-icon>more_vert</mat-icon>
+      </button>
         <mat-menu #address="matMenu">
             <button mat-menu-item (click)="openEditAddressDialog()">Edit</button>
         </mat-menu>
@@ -32,8 +32,8 @@
 <mat-card class="userInfos">
     <mat-card-content>
         <button mat-icon-button class="menuIcon" [matMenuTriggerFor]="birthDate">
-          <mat-icon>more_vert</mat-icon>
-        </button>
+        <mat-icon>more_vert</mat-icon>
+      </button>
         <mat-menu #birthDate="matMenu">
             <button mat-menu-item (click)="openEditBirthDateDialog()">Edit</button>
         </mat-menu>
@@ -41,3 +41,17 @@
         <p>{{ bDay }}.{{ bMonth }}.{{ bYear }}</p>
     </mat-card-content>
 </mat-card>
+
+<div class="buttonWrapper">
+    <button mat-icon-button routerLink="/user">
+        <mat-icon>arrow_back</mat-icon>
+    </button>
+    <button mat-raised-button>
+      <mat-icon>edit</mat-icon>
+        Edit all
+    </button>
+    <button mat-raised-button color="warn">
+      <mat-icon>delete</mat-icon>
+        Delete
+    </button>
+</div>

@@ -24,6 +24,6 @@
 </div>
 
 <div mat-dialog-actions class="buttons">
-    <button [disabled]="loading" mat-button (click)="onNoClick()">Cancel</button>
-    <button [disabled]="loading" mat-button (click)="save()" cdkFocusInitial>Save</button>
+    <button [disabled]="loading" mat-raised-button (click)="onNoClick()">Cancel</button>
+    <button [disabled]="loading" mat-raised-button color="primary" (click)="save()" cdkFocusInitial>Save</button>
 </div>

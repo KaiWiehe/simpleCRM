@@ -3,17 +3,17 @@ import { collection, doc, Firestore, updateDoc } from '@angular/fire/firestore';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-dialog-edit-address',
-  templateUrl: './dialog-edit-address.component.html',
-  styleUrls: ['./dialog-edit-address.component.scss']
+  selector: 'app-edit-user-header',
+  templateUrl: './edit-user-header.component.html',
+  styleUrls: ['./edit-user-header.component.scss']
 })
-export class DialogEditAddressComponent {
+export class EditUserHeaderComponent {
   loading: boolean = false;
   user;
   coll;
 
   constructor(
-    public dialogRef: MatDialogRef<DialogEditAddressComponent>,
+    public dialogRef: MatDialogRef<EditUserHeaderComponent>,
     private firestore: Firestore){}
 
   onNoClick(): void {

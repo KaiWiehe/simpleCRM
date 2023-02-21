@@ -1,5 +1,5 @@
 .header {
-    min-height: 16rem;
+    min-height: 10rem;
     display: flex;
     justify-content: end;
     .imgAndName {
@@ -26,4 +26,12 @@
 .imgFound {
     background-size: 100%;
     height: 8rem;
+}
+
+.buttonWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 1rem 0;
 }

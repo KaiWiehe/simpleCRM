@@ -3,18 +3,18 @@ import { collection, doc, Firestore, updateDoc } from '@angular/fire/firestore';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-dialog-edit-birth-date',
-  templateUrl: './dialog-edit-birth-date.component.html',
-  styleUrls: ['./dialog-edit-birth-date.component.scss']
+  selector: 'app-edit-birth-date',
+  templateUrl: './edit-birth-date.component.html',
+  styleUrls: ['./edit-birth-date.component.scss']
 })
-export class DialogEditBirthDateComponent {
+export class EditBirthDateComponent {
   loading: boolean = false;
   user;
   birthDate!: Date;
   coll;
 
   constructor(
-    public dialogRef: MatDialogRef<DialogEditBirthDateComponent>,
+    public dialogRef: MatDialogRef<EditBirthDateComponent>,
     private firestore: Firestore){}
 
   onNoClick(): void {

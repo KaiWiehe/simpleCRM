@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DialogAddUserComponent } from './dialog-add-user.component';
+import { EditBirthDateComponent } from './edit-birth-date.component';
 
-describe('DialogAddUserComponent', () => {
-  let component: DialogAddUserComponent;
-  let fixture: ComponentFixture<DialogAddUserComponent>;
+describe('EditBirthDateComponent', () => {
+  let component: EditBirthDateComponent;
+  let fixture: ComponentFixture<EditBirthDateComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DialogAddUserComponent ]
+      declarations: [ EditBirthDateComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DialogAddUserComponent);
+    fixture = TestBed.createComponent(EditBirthDateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -3,13 +3,12 @@ import { MatDialogRef} from '@angular/material/dialog';
 import { User } from 'src/models/user.class';
 import { addDoc, collection, Firestore } from '@angular/fire/firestore';
 
-
 @Component({
-  selector: 'app-dialog-add-user',
-  templateUrl: './dialog-add-user.component.html',
-  styleUrls: ['./dialog-add-user.component.scss']
+  selector: 'app-add-user',
+  templateUrl: './add-user.component.html',
+  styleUrls: ['./add-user.component.scss']
 })
-export class DialogAddUserComponent {
+export class AddUserComponent {
   loading: boolean = false;
 
   user = new User();
@@ -22,7 +21,7 @@ export class DialogAddUserComponent {
   //end
 
   constructor(
-    public dialogRef: MatDialogRef<DialogAddUserComponent>,
+    public dialogRef: MatDialogRef<AddUserComponent>,
     private firestore: Firestore,){
 
   }

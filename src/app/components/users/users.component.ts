@@ -2,17 +2,16 @@ import {  Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { TooltipPosition } from '@angular/material/tooltip';
 import {MatDialog} from '@angular/material/dialog';
-import { DialogAddUserComponent } from '../dialog-add-user/dialog-add-user.component';
 import { addDoc, collection, collectionData, doc, docData, Firestore, getDoc, getDocs } from '@angular/fire/firestore';
 import { User } from 'src/models/user.class';
-
+import { AddUserComponent } from 'src/app/templates/add-user/add-user.component';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  selector: 'app-users',
+  templateUrl: './users.component.html',
+  styleUrls: ['./users.component.scss']
 })
-export class UserComponent {
+export class UsersComponent {
   positionOptions: TooltipPosition[] = ['above'];
   position = new FormControl(this.positionOptions[0]);
 
@@ -28,7 +27,7 @@ export class UserComponent {
     }
 
     openDialog(): void {
-      this.dialog.open(DialogAddUserComponent);
+      this.dialog.open(AddUserComponent);
     }
 
     showUsers(){

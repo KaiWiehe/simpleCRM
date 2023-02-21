@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { collection, doc, docData, Firestore } from '@angular/fire/firestore';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
+import { EditAddressComponent } from 'src/app/templates/edit-address/edit-address.component';
+import { EditBirthDateComponent } from 'src/app/templates/edit-birth-date/edit-birth-date.component';
+import { EditUserHeaderComponent } from 'src/app/templates/edit-user-header/edit-user-header.component';
 import { User } from 'src/models/user.class';
-import { DialogEditAddressComponent } from '../dialog-edit-address/dialog-edit-address.component';
-import { DialogEditBirthDateComponent } from '../dialog-edit-birth-date/dialog-edit-birth-date.component';
-import { DialogEditUserHeaderComponent } from '../dialog-edit-user-header/dialog-edit-user-header.component';
 
 @Component({
   selector: 'app-user-detail',
@@ -59,17 +59,17 @@ export class UserDetailComponent {
   }
 
   openEditUserHeaderDialog(){
-    let dialog = this.dialog.open(DialogEditUserHeaderComponent);
+    let dialog = this.dialog.open(EditUserHeaderComponent);
     dialog.componentInstance.user = new User(this.userData.toJSON());
   }
 
   openEditAddressDialog(){
-    let dialog = this.dialog.open(DialogEditAddressComponent);
+    let dialog = this.dialog.open(EditAddressComponent);
     dialog.componentInstance.user = new User(this.userData.toJSON());
   }
 
   openEditBirthDateDialog(){
-    let dialog = this.dialog.open(DialogEditBirthDateComponent);
+    let dialog = this.dialog.open(EditBirthDateComponent);
     dialog.componentInstance.user = new User(this.userData.toJSON());
   }
 }
